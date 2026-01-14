@@ -2,11 +2,32 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch -r dotenv/config src/index.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "multer": "^2.0.2",
+    "pdfjs-dist": "^5.4.530"
+  },
+  "devDependencies": {
+    "@kenjiuno/msgreader": "^1.27.1-alpha.1",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/mailparser": "^3.4.6",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^25.0.8",
+    "mailparser": "^3.9.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0"
+  }
 }
