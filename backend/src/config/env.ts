@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 const requiredEnvVars = ["PORT", "CLAUDE_API_KEY"];
 
 requiredEnvVars.forEach((key) => {
@@ -8,7 +11,7 @@ requiredEnvVars.forEach((key) => {
 
 const config = {
   port: Number(process.env.PORT),
-  
+  claudeApiKey: process.env.CLAUDE_API_KEY,
 };
 
 export default config;
